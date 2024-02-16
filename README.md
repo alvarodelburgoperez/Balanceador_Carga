@@ -6,7 +6,7 @@
 C:\Users\alvar\Desktop\DevOps\balanceo_carga
 ```
 
-1. Con este comando creamos 3 HTML con el contenido para visualizar.
+2. Con este comando creamos 3 HTML con el contenido para visualizar.
 
 ```bash
 echo "<h1>Hola Server 1</h1>" > index.1.html
@@ -20,7 +20,7 @@ echo "<h1>Hola Server 2</h1>" > index.2.html
 echo "<h1>Hola Server 3</h1>" > index.3.html
 ```
 
-1. Creamos 3 imágenes en docker cada una con su puerto
+3. Creamos 3 imágenes en docker cada una con su puerto
 
 ```bash
 docker run --rm -v C:/Users/alvar/Desktop/DevOps/balanceo_carga/index.1.html:/usr/share/nginx/html/index.html -p 8082:80 nginx
@@ -34,7 +34,7 @@ docker run --rm -v C:/Users/alvar/Desktop/DevOps/balanceo_carga/index.2.html:/us
 docker run --rm -v C:/Users/alvar/Desktop/DevOps/balanceo_carga/index.3.html:/usr/share/nginx/html/index.html -p 8084:80 nginx
 ```
 
-1. Usamos este comando para comprobar cada IP de los contenedores, para después usarlas en el el nginx.conf.
+4. Usamos este comando para comprobar cada IP de los contenedores, para después usarlas en el el nginx.conf.
 
 ```bash
 docker inspect
