@@ -45,7 +45,7 @@ Así quedaría el archivo nginx.conf:
 - server 172.17.0.3:80 down; sirve para desactivar un servidor.
 - server 172.17.0.4:80 backup; sirve para tenerlo de repuesto.
 
-
+```jsx
 upstream backend {
 server 172.17.0.3:80; #server 1
 server 172.17.0.4:80; # server 2
@@ -68,4 +68,4 @@ location /server3/ {
     proxy_pass <http://172.17.0.5/>;
     }
 }
-
+```
