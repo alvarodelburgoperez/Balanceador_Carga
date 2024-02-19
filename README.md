@@ -20,7 +20,7 @@ echo "<h1>Hola Server 2</h1>" > index.2.html
 echo "<h1>Hola Server 3</h1>" > index.3.html
 ```
 
-3. Creamos 3 imágenes en docker cada una con su puerto
+3. Creamos 3 imágenes en docker cada una con su puerto y la imagen para el balanceador
 
 ```bash
 docker run --rm -v C:/Users/alvar/Desktop/DevOps/balanceo_carga/index.1.html:/usr/share/nginx/html/index.html -p 8082:80 nginx
@@ -28,6 +28,10 @@ docker run --rm -v C:/Users/alvar/Desktop/DevOps/balanceo_carga/index.1.html:/us
 
 ```bash
 docker run --rm -v C:/Users/alvar/Desktop/DevOps/balanceo_carga/index.2.html:/usr/share/nginx/html/index.html -p 8083:80 nginx
+```
+
+```bash
+docker run --rm -v C:/Users/alvar/Desktop/DevOps/balanceo_carga/index.3.html:/usr/share/nginx/html/index.html -p 8084:80 nginx
 ```
 
 ```bash
